@@ -1,0 +1,6 @@
+{
+  "name": "Super Tic-Tac-Toe Arena",
+  "description": "An extensive, feature-rich Tic-Tac-Toe game with spectacular victory and draw animations, smart AI opponents, versatile board sizes, match modes, and comprehensive stats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

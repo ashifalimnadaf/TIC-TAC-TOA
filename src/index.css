@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', sans-serif;
+  }
+
+  .font-mono-numbers {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes board-quake {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  15% { transform: translate(-4px, 3px) rotate(-0.5deg); }
+  30% { transform: translate(4px, -3px) rotate(0.5deg); }
+  45% { transform: translate(-3px, -2px) rotate(-0.3deg); }
+  60% { transform: translate(3px, 3px) rotate(0.3deg); }
+  75% { transform: translate(-2px, 1px) rotate(-0.2deg); }
+  90% { transform: translate(2px, -1px) rotate(0.1deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-board-quake {
+  animation: board-quake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes pulse-halo {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), inset 0 0 10px rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.8), inset 0 0 20px rgba(245, 158, 11, 0.4);
+  }
+}
+
+.animate-win-halo {
+  animation: pulse-halo 1.5s ease-in-out infinite;
+}
+
+@keyframes draw-frost {
+  0% {
+    filter: drop-shadow(0 0 0px rgba(148, 163, 184, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(148, 163, 184, 0.8));
+  }
+  100% {
+    filter: drop-shadow(0 0 8px rgba(148, 163, 184, 0.4));
+  }
+}
+
+.animate-draw-frost {
+  animation: draw-frost 1s ease-out forwards;
+}
